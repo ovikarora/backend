@@ -10,7 +10,7 @@ const docs=db.get('project');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/add', function(req, res, next) {
 //  res.render('index', { title: 'Express' });
 
     docs.insert({"name":"akshit","class":"btech","age":"20","dept":"CSE"},function (err,docs) {
@@ -21,8 +21,7 @@ router.get('/', function(req, res, next) {
 
 
 });
-
-router.get('/well', function(req, res, next) {
+router.get('/get', function(req, res, next) {
    // res.send('asadasfaf');
 
     docs.find({},function(err,docs){
