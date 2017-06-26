@@ -28,7 +28,7 @@ router.get('/get', function(req, res, next) {
         if(err)
             console.log(err)
         else
-            res.json(docs);
+            res.json(docs[0]);
 
     })
 });
