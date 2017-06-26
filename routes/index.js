@@ -30,6 +30,7 @@ router.get('/get', function(req, res, next) {
         else
             res.json(docs[0]);
 
+        
     })
 });
 
