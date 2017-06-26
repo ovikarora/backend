@@ -24,7 +24,7 @@ router.get('/add', function(req, res, next) {
 router.get('/get', function(req, res, next) {
    // res.send('asadasfaf');
 
-    docs.find({},function(err,docs){
+    docs.find({"id":"123"},function(err,docs){
         if(err)
             console.log(err)
         else
