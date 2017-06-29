@@ -10,7 +10,7 @@ const docs=db.get('project');
 
 
 /* GET home page. */
-router.get('/add', function(req, res, next) {
+router.post('/add', function(req, res, next) {
 //  res.render('index', { title: 'Express' });
 
     docs.insert({"name":"akshit","class":"btech","age":"20","dept":"CSE"},function (err,docs) {
@@ -31,6 +31,16 @@ router.get('/get', function(req, res, next) {
             res.json(docs[0]);
 
         
+    })
+});
+router.post('/well',function(req,res,next){
+    var username=req.body.name;
+    var pass=req.body.password;
+    docs.insert({"name":username,"password":pass},function(err,docs){
+        if(err)
+            console.log(err)
+        else
+            res.json(docs[0]);
     })
 });
 
